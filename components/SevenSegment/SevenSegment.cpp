@@ -1,25 +1,23 @@
 #include <stdio.h>
 #include "SevenSegment.h"
 
-
 void SevenSegment::HardwareTest()
 {
     common.ON();
     seg_a.ON();
-    vTaskDelay(500/portTICK_PERIOD_MS);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
     seg_b.ON();
-    vTaskDelay(500/portTICK_PERIOD_MS);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
     seg_c.ON();
-    vTaskDelay(500/portTICK_PERIOD_MS);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
     seg_d.ON();
-    vTaskDelay(500/portTICK_PERIOD_MS);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
     seg_e.ON();
-    vTaskDelay(500/portTICK_PERIOD_MS);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
     seg_f.ON();
-    vTaskDelay(500/portTICK_PERIOD_MS);
+    vTaskDelay(500 / portTICK_PERIOD_MS);
     seg_g.ON();
-    vTaskDelay(500/portTICK_PERIOD_MS);
-
+    vTaskDelay(500 / portTICK_PERIOD_MS);
 }
 
 void SevenSegment::DisplayBlank()
@@ -33,12 +31,10 @@ void SevenSegment::DisplayBlank()
     seg_f.OFF();
     seg_g.OFF();
     common.OFF();
-
 }
 
 void SevenSegment::DisplayNum0()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.ON();
     seg_c.ON();
@@ -46,12 +42,10 @@ void SevenSegment::DisplayNum0()
     seg_e.ON();
     seg_f.ON();
     seg_g.OFF();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum1()
 {
-    common.OFF();
     seg_a.OFF();
     seg_b.ON();
     seg_c.ON();
@@ -59,12 +53,10 @@ void SevenSegment::DisplayNum1()
     seg_e.OFF();
     seg_f.OFF();
     seg_g.OFF();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum2()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.ON();
     seg_c.OFF();
@@ -72,12 +64,10 @@ void SevenSegment::DisplayNum2()
     seg_e.ON();
     seg_f.OFF();
     seg_g.ON();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum3()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.ON();
     seg_c.ON();
@@ -85,12 +75,10 @@ void SevenSegment::DisplayNum3()
     seg_e.OFF();
     seg_f.OFF();
     seg_g.ON();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum4()
 {
-    common.OFF();
     seg_a.OFF();
     seg_b.ON();
     seg_c.ON();
@@ -98,12 +86,10 @@ void SevenSegment::DisplayNum4()
     seg_e.OFF();
     seg_f.ON();
     seg_g.ON();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum5()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.OFF();
     seg_c.ON();
@@ -111,12 +97,10 @@ void SevenSegment::DisplayNum5()
     seg_e.OFF();
     seg_f.ON();
     seg_g.ON();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum6()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.OFF();
     seg_c.ON();
@@ -124,12 +108,10 @@ void SevenSegment::DisplayNum6()
     seg_e.ON();
     seg_f.ON();
     seg_g.ON();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum7()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.ON();
     seg_c.ON();
@@ -137,12 +119,10 @@ void SevenSegment::DisplayNum7()
     seg_e.OFF();
     seg_f.OFF();
     seg_g.OFF();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum8()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.ON();
     seg_c.ON();
@@ -150,12 +130,10 @@ void SevenSegment::DisplayNum8()
     seg_e.ON();
     seg_f.ON();
     seg_g.ON();
-    common.ON();
 }
 
 void SevenSegment::DisplayNum9()
 {
-    common.OFF();
     seg_a.ON();
     seg_b.ON();
     seg_c.ON();
@@ -163,48 +141,50 @@ void SevenSegment::DisplayNum9()
     seg_e.OFF();
     seg_f.ON();
     seg_g.ON();
-    common.ON();
 }
-
-
-
-
 
 void SevenSegment::DisplayNumber(int number)
 {
     switch (number)
     {
-        case 0:
-            DisplayNum0();
+    case 0:
+        DisplayNum0();
         break;
-        case 1:
-            DisplayNum1();
+    case 1:
+        DisplayNum1();
         break;
-        case 2:
-            DisplayNum2();
+    case 2:
+        DisplayNum2();
         break;
-        case 3:
-            DisplayNum3();
+    case 3:
+        DisplayNum3();
         break;
-        case 4:
-            DisplayNum4();
+    case 4:
+        DisplayNum4();
         break;
-        case 5:
-            DisplayNum5();
+    case 5:
+        DisplayNum5();
         break;
-        case 6:
-            DisplayNum6();
+    case 6:
+        DisplayNum6();
         break;
-        case 7:
-            DisplayNum7();
+    case 7:
+        DisplayNum7();
         break;
-        case 8:
-            DisplayNum8();
+    case 8:
+        DisplayNum8();
         break;
-        case 9:
-            DisplayNum9();
+    case 9:
+        DisplayNum9();
         break;
     }
-
 }
 
+void SevenSegment::DisplayOff()
+{
+    common.OFF();
+}
+void SevenSegment::DisplayOn()
+{
+    common.ON();
+}
