@@ -21,4 +21,14 @@ public:
     void HardwareTest();
     void DisplayBlank();
     void DisplayNumber(int number);
+    void DisplayNum0();
+    void DisplayNum1();
+    void DisplayNum2();
+    void DisplayNum3();
+    void DisplayNum4();
+    void DisplayNum5();
+    void DisplayNum6();
+    void DisplayNum7();
+    void DisplayNum8();
+    void DisplayNum9();
 };
