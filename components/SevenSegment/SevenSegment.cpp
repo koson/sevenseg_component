@@ -186,7 +186,24 @@ void SevenSegment::DisplayNumber(int number)
         case 3:
             DisplayNum3();
         break;
-        // Todo: add case 4 to 9
+        case 4:
+            DisplayNum4();
+        break;
+        case 5:
+            DisplayNum5();
+        break;
+        case 6:
+            DisplayNum6();
+        break;
+        case 7:
+            DisplayNum7();
+        break;
+        case 8:
+            DisplayNum8();
+        break;
+        case 9:
+            DisplayNum9();
+        break;
     }
 
 }
